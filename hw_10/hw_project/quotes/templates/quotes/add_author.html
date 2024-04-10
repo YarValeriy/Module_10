@@ -1,0 +1,13 @@
+{% extends 'quotes/base.html' %}
+{% block content %}
+<div class="container">
+    <h2>Add New Author</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="{% url 'quotes:root' %}" class="btn btn-primary">Back to Quotes</a>
+
+    </form>
+</div>
+{% endblock %}
