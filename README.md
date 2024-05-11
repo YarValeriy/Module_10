@@ -9,11 +9,11 @@
    - перейти в робочий каталоg: cd hw_project
    - запустити сервер: python manage.py runserver
    - перейти на сайт за посиланням http://127.0.0.1:8000/ 
-5. Configuration.
+4. Configuration.
 Для встановлення пакету і роботи з БД Postgres необхідно:
    - скопіювати hw_project на локальний диск
    - запустити БД postgres на локальній машині
-   - в файлі hw_project/hw_project/settings.py встановити параметри підключення до БД postgresза замінивши поточні параметри:
+   - в файлі hw_project/hw_project/settings.py (.env) встановити параметри підключення до БД postgresза замінивши поточні параметри:
      DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -27,9 +27,10 @@
    - ініцюювати міграцію даних з MongoDB в Postgres командою:
      python utils/migration.py
    - запустити сервер: python manage.py runserver
+   - для логіна зареєстрованого коритувача викоритовувати username, а не email. 
 
-   7. Contributing Guidelines
+   5. Contributing Guidelines
 Код може вільно копіюватися і використатися.
 
-8. License
+6. License
 Проєкт створений в межах навчального курсу школи GoIt, якій і належать права на продукт.
